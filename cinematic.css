@@ -1,0 +1,71 @@
+/* MeMiasma — CINEMATIC depth layer. Additive only; original content and components remain intact. */
+:root{--cin-ease:cubic-bezier(.2,.75,.2,1);--cin-border:rgba(208,216,255,.14)}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{perspective:1400px;transform-style:preserve-3d}
+body.cin-loading{overflow:hidden}
+#cinematic-loader{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;overflow:hidden;background:#080a12;color:#eef0ff;opacity:1;visibility:visible;transition:opacity .9s var(--cin-ease),visibility .9s;isolation:isolate}
+#cinematic-loader.is-leaving{opacity:0;visibility:hidden;pointer-events:none}
+#cinematic-loader canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.cin-loader-grid{position:absolute;inset:-30%;background-image:linear-gradient(rgba(159,145,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(159,145,255,.08) 1px,transparent 1px);background-size:58px 58px;transform:perspective(600px) rotateX(62deg) translateY(25%);mask-image:linear-gradient(transparent,#000 30%,#000 75%,transparent);animation:cin-grid-drift 18s linear infinite}
+.cin-loader-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 46%,transparent 0%,rgba(8,10,18,.18) 35%,#080a12 78%);pointer-events:none}
+.cin-loader-core{width:min(88vw,560px);position:relative;text-align:center;padding:36px 22px;animation:cin-core-in 1.2s var(--cin-ease) both}
+.cin-loader-mark{width:112px;height:112px;margin:0 auto 28px;position:relative;display:grid;place-items:center;transform-style:preserve-3d;animation:cin-mark-float 5s ease-in-out infinite}
+.cin-loader-mark:before,.cin-loader-mark:after{content:"";position:absolute;inset:4px;border:1px solid rgba(182,255,103,.65);border-radius:29px;transform:rotate(45deg);box-shadow:0 0 38px rgba(182,255,103,.1),inset 0 0 28px rgba(182,255,103,.05)}
+.cin-loader-mark:after{inset:-11px;border-color:rgba(168,150,255,.55);border-radius:35px;transform:rotate(-28deg) rotateY(42deg);animation:cin-ring-spin 12s linear infinite}
+.cin-loader-mark span{font:800 29px 'DM Mono',monospace;letter-spacing:-5px;color:#c4ff7d;text-shadow:0 0 25px rgba(182,255,103,.45);transform:translateZ(25px)}
+.cin-kicker{font:500 10px 'DM Mono',monospace;letter-spacing:.28em;color:#b6ff67;text-transform:uppercase}
+.cin-loader-title{font:800 clamp(29px,6vw,55px)/1.05 Manrope, sans-serif;letter-spacing:-.065em;margin:15px 0 12px}
+.cin-loader-title span{color:transparent;background:linear-gradient(100deg,#fff 8%,#b8ff69 48%,#a89aff 90%);background-clip:text;-webkit-background-clip:text}
+.cin-loader-copy{color:#8e93aa;font-size:12px;letter-spacing:.035em;margin:0 auto 30px;max-width:340px}
+.cin-loader-meter{height:2px;width:min(270px,75%);margin:auto;background:rgba(255,255,255,.1);overflow:hidden;position:relative}
+.cin-loader-meter span{display:block;width:100%;height:100%;background:linear-gradient(90deg,#9d8cff,#b6ff67);transform-origin:left;animation:cin-progress 2.25s var(--cin-ease) both;box-shadow:0 0 16px #b6ff67}
+.cin-loader-meta{display:flex;justify-content:space-between;width:min(270px,75%);margin:12px auto 0;color:#555c74;font:10px 'DM Mono',monospace;letter-spacing:.08em}
+.cin-loader-meta strong{color:#c5ff8a;font-weight:500}
+.cin-scanline{position:absolute;left:0;right:0;top:-15%;height:20%;background:linear-gradient(transparent,rgba(167,151,255,.045),transparent);animation:cin-scan 4.5s ease-in-out infinite;pointer-events:none}
+/* Layered depth: realistic restraint, not every element wildly floating. */
+.site-header{transform:translateZ(24px);backdrop-filter:blur(22px) saturate(135%);-webkit-backdrop-filter:blur(22px) saturate(135%);border-bottom-color:rgba(197,205,255,.1)}
+.hero{transform-style:preserve-3d;perspective:1200px}
+.hero-copy{transform:translateZ(26px);animation:cin-rise .9s .12s var(--cin-ease) both}
+.hero-visual{transform-style:preserve-3d;perspective:1100px;animation:cin-rise 1s .2s var(--cin-ease) both}
+.code-window{transform:rotateY(-9deg) rotateX(4deg) translateZ(34px);transform-style:preserve-3d;transition:transform .65s var(--cin-ease),box-shadow .65s var(--cin-ease);box-shadow:0 45px 100px rgba(0,0,0,.4),0 10px 35px rgba(155,139,255,.1),inset 0 1px rgba(255,255,255,.13)}
+.hero-visual:hover .code-window{transform:rotateY(-3deg) rotateX(1deg) translateZ(52px) translateY(-4px);box-shadow:0 55px 115px rgba(0,0,0,.48),0 12px 45px rgba(155,139,255,.16),inset 0 1px rgba(255,255,255,.17)}
+.floating-chip{transform:translateZ(70px);backdrop-filter:blur(18px) saturate(150%);box-shadow:0 18px 44px rgba(0,0,0,.26),inset 0 1px rgba(255,255,255,.16)}
+.ambient{filter:blur(90px);will-change:transform}
+.section-block,.signal-lab,.trust-strip,.contact-section{transform-style:preserve-3d}
+.service-card,.project-card,.review-card,.process-step,.stack-item,.contact-card,.signal-console{transform-style:preserve-3d;backface-visibility:hidden;transition:transform .45s var(--cin-ease),border-color .4s ease,box-shadow .45s ease;box-shadow:0 12px 30px rgba(0,0,0,.09)}
+.service-card:hover,.project-card:hover,.review-card:hover,.process-step:hover,.stack-item:hover{transform:perspective(900px) translateY(-6px) rotateX(1.2deg) rotateY(-1deg) translateZ(8px);border-color:rgba(183,255,103,.28);box-shadow:0 26px 55px rgba(0,0,0,.2),0 0 0 1px rgba(183,255,103,.035)}
+.contact-card{transform:perspective(1200px) rotateX(1deg);box-shadow:0 45px 100px rgba(0,0,0,.26),inset 0 1px rgba(255,255,255,.06)}
+.signal-console{box-shadow:0 35px 90px rgba(0,0,0,.22),0 0 0 1px rgba(174,160,255,.045)}
+.button{transform:translateZ(0);transition:transform .25s var(--cin-ease),box-shadow .25s ease,background .25s ease}
+.button:hover{transform:translateY(-3px) translateZ(8px);box-shadow:0 13px 30px rgba(0,0,0,.22)}
+/* Reveal animation is subtle and leaves the page usable if JS is disabled. */
+.cin-reveal{opacity:0;transform:translate3d(0,22px,-12px);transition:opacity .8s var(--cin-ease),transform .8s var(--cin-ease)}
+.cin-reveal.cin-seen{opacity:1;transform:translate3d(0,0,0)}
+#cinAmbientCanvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.58}
+body>*:not(#cinematic-loader):not(#cinAmbientCanvas){position:relative;z-index:1}
+#particleCanvas{z-index:0!important;pointer-events:none}
+@keyframes cin-progress{0%{transform:scaleX(0)}15%{transform:scaleX(.16)}55%{transform:scaleX(.72)}100%{transform:scaleX(1)}}
+@keyframes cin-grid-drift{from{background-position:0 0}to{background-position:0 58px}}
+@keyframes cin-ring-spin{to{transform:rotate(332deg) rotateY(42deg)}}
+@keyframes cin-mark-float{0%,100%{transform:translateY(0) rotateX(0)}50%{transform:translateY(-7px) rotateX(7deg)}}
+@keyframes cin-core-in{from{opacity:0;transform:translateY(18px) scale(.97);filter:blur(8px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+@keyframes cin-rise{from{opacity:0;transform:translateY(18px) translateZ(0)}to{opacity:1;transform:translateY(0) translateZ(26px)}}
+@keyframes cin-scan{0%,100%{transform:translateY(0);opacity:0}25%,70%{opacity:1}85%{transform:translateY(600%);opacity:0}}
+@media(max-width:800px){.code-window{transform:none}.hero-visual:hover .code-window{transform:translateY(-3px)}.service-card:hover,.project-card:hover,.review-card:hover,.process-step:hover,.stack-item:hover{transform:translateY(-3px)}.cin-loader-mark{width:88px;height:88px}.cin-loader-mark span{font-size:24px}}
+@media(pointer:coarse){.service-card:hover,.project-card:hover,.review-card:hover,.process-step:hover,.stack-item:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){#cinematic-loader *,#cinAmbientCanvas{animation:none!important}.cin-loader-meter span{transform:scaleX(1)}.cin-reveal{opacity:1;transform:none;transition:none}.code-window,.service-card,.project-card,.review-card,.process-step,.stack-item{transition:none!important}}
+
+/* FIX: keep the entry mark above every decorative layer; never show a blank loader. */
+#cinematic-loader{z-index:2147483000;isolation:isolate}
+#cinematic-loader canvas{z-index:0!important;pointer-events:none}
+#cinematic-loader .cin-loader-grid,
+#cinematic-loader .cin-loader-vignette,
+#cinematic-loader .cin-scanline{z-index:1}
+#cinematic-loader .cin-loader-core{z-index:2;display:block!important;visibility:visible!important;opacity:1;min-height:220px}
+#cinematic-loader .cin-loader-mark,
+#cinematic-loader .cin-kicker,
+#cinematic-loader .cin-loader-title,
+#cinematic-loader .cin-loader-copy,
+#cinematic-loader .cin-loader-meter,
+#cinematic-loader .cin-loader-meta{visibility:visible!important}
+@media(max-width:600px){#cinematic-loader .cin-loader-core{padding:24px 18px}#cinematic-loader .cin-loader-mark{margin-bottom:20px}}

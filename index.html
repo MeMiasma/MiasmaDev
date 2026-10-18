@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="description" content="MeMiasma — Senior Python Developer. 10+ лет опыта, 320+ проектов. Telegram-боты, API, автоматизация, парсеры, SaaS." />
+  <title>MeMiasma — Senior Python Developer · 10+ лет опыта</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="ultra.css" />
+  <link rel="stylesheet" href="signal-lab.css" />
+  <link rel="stylesheet" href="cinematic.css" />
+</head>
+<body>
+  <canvas id="particleCanvas"></canvas>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="ambient ambient-three"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#home">
+      <span class="brand-mark">&lt;/&gt;</span>
+      <span>MeMiasma<span class="brand-dot">.</span>dev</span>
+    </a>
+    <div class="header-rating">
+      <span class="rating-stars">★★★★★</span>
+      <span class="rating-value">4.9</span>
+      <span class="rating-count">(248 отзывов)</span>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Меню">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#services">Услуги</a>
+      <a href="#projects">Проекты</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#process">Процесс</a>
+      <a href="#about">Обо мне</a>
+      <a class="nav-cta" href="#contact">Связаться <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="status-dot"></span> OPEN TO WORK
+          <span class="eyebrow-divider">/</span> SENIOR PYTHON DEVELOPER
+          <span class="eyebrow-divider">/</span> 10+ YEARS
+        </div>
+        <h1>Превращаю сложные<br><span class="gradient-text">задачи в рабочий код.</span></h1>
+        <p class="hero-lead">
+          Senior Python-разработчик с опытом <strong>более 10 лет</strong> и <strong>320+ реализованных проектов</strong>.
+          Специализируюсь на Telegram-ботах, backend-сервисах, парсерах, автоматизации и SaaS-платформах.
+          От идеи и MVP до стабильного решения, готового к росту.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Смотреть проекты <span>↓</span></a>
+          <a class="button button-ghost" href="https://t.me/MeMiasma" target="_blank">Написать в Telegram <span>↗</span></a>
+        </div>
+        <div class="hero-proof">
+          <div class="proof-item"><strong data-count="320">0</strong><span>проектов</span></div>
+          <div class="proof-item"><strong data-count="4.9" data-decimal="1">0</strong><span>рейтинг</span></div>
+          <div class="proof-item"><strong data-count="248">0</strong><span>отзывов</span></div>
+          <div class="proof-item"><strong data-count="10">0</strong><span>лет опыта</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="orb orb-a"></div><div class="orb orb-b"></div>
+        <div class="code-window">
+          <div class="window-top">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <span>solution.py</span>
+            <span class="window-lock">● production</span>
+          </div>
+          <div class="code-content">
+            <div><span class="line-no">01</span><span class="code-purple">class</span> <span class="code-blue">SeniorDeveloper</span>:</div>
+            <div><span class="line-no">02</span>&nbsp;&nbsp;<span class="code-purple">def</span> <span class="code-yellow">__init__</span>(self):</div>
+            <div><span class="line-no">03</span>&nbsp;&nbsp;&nbsp;&nbsp;self.experience = <span class="code-green">"10+ years"</span></div>
+            <div><span class="line-no">04</span>&nbsp;&nbsp;&nbsp;&nbsp;self.projects = <span class="code-green">320</span></div>
+            <div><span class="line-no">05</span>&nbsp;&nbsp;<span class="code-purple">def</span> <span class="code-yellow">solve</span>(self, business_task):</div>
+            <div><span class="line-no">06</span>&nbsp;&nbsp;&nbsp;&nbsp;problem = self.<span class="code-blue">analyze</span>(business_task)</div>
+            <div><span class="line-no">07</span>&nbsp;&nbsp;&nbsp;&nbsp;plan = self.<span class="code-blue">architect</span>(problem)</div>
+            <div><span class="line-no">08</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-purple">return</span> self.<span class="code-green">ship</span>(plan)</div>
+            <div class="code-spacer"></div>
+            <div class="terminal-line"><span class="terminal-prompt">➜</span> tests passed <span class="terminal-check">✓</span></div>
+            <div class="terminal-line"><span class="terminal-prompt">➜</span> production ready <span class="terminal-check">✓</span></div>
+          </div>
+          <div class="window-footer"><span>UTF-8</span><span>Python 3.12</span><span>Ln 08, Col 24</span></div>
+        </div>
+        <div class="floating-chip chip-top"><span class="chip-icon">⌘</span> 320+ projects</div>
+        <div class="floating-chip chip-bottom"><span class="chip-icon green">★</span> 4.9 / 5.0</div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="section-wrap trust-inner">
+        <span>320+ ПРОЕКТОВ</span>
+        <span>248 ОТЗЫВОВ</span>
+        <span>РЕЙТИНГ 4.9 / 5.0</span>
+        <span>10+ ЛЕТ ОПЫТА</span>
+        <span>ПОДДЕРЖКА ПОСЛЕ РЕЛИЗА</span>
+      </div>
+    </section>
+
+    <!-- SIGNAL LAB: interactive system architecture explorer -->
+    <section class="section-wrap signal-lab" id="signalLab" aria-labelledby="signalLabTitle">
+      <div class="signal-lab-head">
+        <div>
+          <div class="eyebrow"><span class="signal-live-dot"></span> FIELD NOTES / 001 — SYSTEM DESIGN</div>
+          <h2 id="signalLabTitle">Не просто код.<br><span class="muted-heading">Связи, которые работают.</span></h2>
+        </div>
+        <p>Выбери тип задачи и посмотри, как компоненты собираются в работающую систему. Это интерактивная схема архитектуры — не картинка для декора.</p>
+      </div>
+      <div class="signal-console">
+        <aside class="signal-sidebar">
+          <div class="signal-sidebar-label">SELECT A BLUEPRINT</div>
+          <button class="signal-blueprint is-active" data-blueprint="telegram" aria-pressed="true"><span class="signal-blueprint-index">A1</span><span><b>Telegram ecosystem</b><small>Бот · база · платежи</small></span><span class="signal-arrow">↗</span></button>
+          <button class="signal-blueprint" data-blueprint="api" aria-pressed="false"><span class="signal-blueprint-index">B2</span><span><b>Backend platform</b><small>API · очередь · данные</small></span><span class="signal-arrow">↗</span></button>
+          <button class="signal-blueprint" data-blueprint="automation" aria-pressed="false"><span class="signal-blueprint-index">C3</span><span><b>Automation pipeline</b><small>Сбор · обработка · отчёт</small></span><span class="signal-arrow">↗</span></button>
+          <div class="signal-sidebar-foot"><span class="signal-pulse"></span> SYSTEM MODEL / INTERACTIVE</div>
+        </aside>
+        <div class="signal-stage" data-blueprint-view="telegram">
+          <div class="signal-stage-top"><span><i></i> ARCHITECTURE / LIVE VIEW</span><span class="signal-stage-version">MM—SYS.01</span></div>
+          <div class="signal-graph-wrap">
+            <div class="signal-grid-bg"></div>
+            <svg class="signal-wires" viewBox="0 0 720 390" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <defs><linearGradient id="signalWire" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a99aff"/><stop offset="1" stop-color="#b7ff65"/></linearGradient></defs>
+              <path class="signal-wire" d="M155 92 C220 92 218 185 288 185"/><path class="signal-wire" d="M155 292 C220 292 218 205 288 205"/><path class="signal-wire" d="M390 195 C445 195 444 95 505 95"/><path class="signal-wire" d="M390 205 C445 205 444 292 505 292"/><path class="signal-wire signal-wire-dash" d="M555 125 L555 260"/>
+              <circle class="signal-wire-packet packet-a" r="4"><animateMotion dur="3.2s" repeatCount="indefinite" path="M155 92 C220 92 218 185 288 185"/></circle>
+              <circle class="signal-wire-packet packet-b" r="4"><animateMotion dur="4s" repeatCount="indefinite" path="M390 195 C445 195 444 95 505 95"/></circle>
+              <circle class="signal-wire-packet packet-c" r="4"><animateMotion dur="3.6s" repeatCount="indefinite" path="M390 205 C445 205 444 292 505 292"/></circle>
+            </svg>
+            <div class="signal-node node-client"><span class="signal-node-glyph">↗</span><span class="signal-node-name">CLIENT</span><small>Telegram / Web</small><em>01 · INPUT</em></div>
+            <div class="signal-node node-logic"><span class="signal-node-glyph">⌘</span><span class="signal-node-name">CORE LOGIC</span><small>Python · async</small><em>02 · PROCESS</em></div>
+            <div class="signal-node node-data"><span class="signal-node-glyph">▤</span><span class="signal-node-name">DATA LAYER</span><small>PostgreSQL · Redis</small><em>03 · STORAGE</em></div>
+            <div class="signal-node node-pay"><span class="signal-node-glyph">◇</span><span class="signal-node-name">INTEGRATIONS</span><small>Payments · API</small><em>04 · SERVICES</em></div>
+            <div class="signal-graph-center"><span class="signal-center-ring"></span><span class="signal-center-core">M</span></div>
+            <div class="signal-coord coord-a">X 048.21 / Y 12.04</div><div class="signal-coord coord-b">LATENCY TARGET <b>&lt; 100ms</b></div>
+          </div>
+          <div class="signal-stage-bottom"><span><i class="signal-status-dot"></i><b id="signalStatus">4 modules connected</b></span><span id="signalDescription">EVENT-DRIVEN · ASYNC I/O · FAIL-SAFE</span></div>
+        </div>
+      </div>
+      <div class="signal-lab-caption"><span>FIG. 01</span><span>СХЕМА МЕНЯЕТСЯ В ЗАВИСИМОСТИ ОТ ВЫБРАННОГО СЦЕНАРИЯ</span><span>DESIGNED BY MeMiasma</span></div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section-wrap section-block" id="services">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">01 / ЧЕМ ПОМОГУ</div>
+          <h2>Код — это инструмент.<br><span class="muted-heading">Результат — главное.</span></h2>
+        </div>
+        <p>Подключаюсь к задаче на нужном этапе: от проверки идеи до развития уже работающего продукта.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card"><div class="service-icon">⌘</div><h3>Telegram-боты</h3><p>Приём заявок, поддержка, каталоги, уведомления, платежи и админ-панели. Полный цикл: от прототипа до продакшена.</p><div class="service-tags"><span>aiogram 3.x</span><span>Telegram API</span><span>FSM</span></div></article>
+        <article class="service-card"><div class="service-icon">⤴</div><h3>Backend и API</h3><p>Сервисы, интеграции, авторизация, бизнес-логика и надёжная работа с данными. Проектирую с расчётом на нагрузку.</p><div class="service-tags"><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span></div></article>
+        <article class="service-card"><div class="service-icon">⚙</div><h3>Автоматизация</h3><p>Убираю повторяющиеся ручные операции: обработка файлов, отчёты и синхронизация данных между сервисами.</p><div class="service-tags"><span>Python</span><span>Celery</span><span>Integrations</span></div></article>
+        <article class="service-card"><div class="service-icon">◈</div><h3>Парсеры и SaaS</h3><p>Парсинг сайтов, аналитика, дашборды и SaaS-платформы под задачи бизнеса. Работа с прокси, капчей и антиботом.</p><div class="service-tags"><span>Scrapy</span><span>Selenium</span><span>SaaS</span></div></article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section-wrap section-block" id="projects">
+      <div class="section-heading projects-heading">
+        <div>
+          <div class="eyebrow">02 / ПОРТФОЛИО</div>
+          <h2>320+ проектов,<br><span class="muted-heading">которые решают задачи.</span></h2>
+        </div>
+        <p>Реальные кейсы с заказчиками, датами, стеками и отзывами. Каждый проект с подробным описанием и стеком.</p>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="🔍 Поиск по названию, заказчику, тегу..." autocomplete="off" />
+        <select id="sortSelect">
+          <option value="date-desc">Сначала новые</option>
+          <option value="date-asc">Сначала старые</option>
+          <option value="rating-desc">По рейтингу</option>
+          <option value="title-asc">По алфавиту</option>
+        </select>
+      </div>
+
+      <div class="filter-row" id="filterRow">
+        <button class="filter-button active" data-filter="all">Все <span id="count-all">0</span></button>
+        <button class="filter-button" data-filter="ecommerce">E-commerce <span id="count-ecommerce">0</span></button>
+        <button class="filter-button" data-filter="fintech">Финтех <span id="count-fintech">0</span></button>
+        <button class="filter-button" data-filter="saas">SaaS <span id="count-saas">0</span></button>
+        <button class="filter-button" data-filter="automation">Автоматизация <span id="count-automation">0</span></button>
+        <button class="filter-button" data-filter="logistics">Логистика <span id="count-logistics">0</span></button>
+        <button class="filter-button" data-filter="medical">Медицина <span id="count-medical">0</span></button>
+        <button class="filter-button" data-filter="education">Образование <span id="count-education">0</span></button>
+        <button class="filter-button" data-filter="realestate">Недвижимость <span id="count-realestate">0</span></button>
+        <button class="filter-button" data-filter="delivery">Доставка <span id="count-delivery">0</span></button>
+        <button class="filter-button" data-filter="mobile">Мобильные <span id="count-mobile">0</span></button>
+      </div>
+
+      <div class="projects-info">
+        <span id="projectsCounter">Показано 30 из 320</span>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid"></div>
+
+      <div class="load-more-wrap">
+        <button class="button button-ghost" id="loadMoreBtn">Показать ещё 30 проектов ↓</button>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section-wrap section-block" id="reviews">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">03 / КНИГА ОТЗЫВОВ</div>
+          <h2>Что говорят клиенты.<br><span class="muted-heading">248 отзывов, рейтинг 4.9.</span></h2>
+        </div>
+        <p>Реальные отзывы от заказчиков. Средний рейтинг 4.9 из 5.0. 98% клиентов возвращаются с новыми проектами.</p>
+      </div>
+
+      <div class="reviews-stats">
+        <div class="review-stat-card">
+          <div class="stat-value">4.9</div>
+          <div class="stat-stars">★★★★★</div>
+          <div class="stat-label">Средний рейтинг</div>
+        </div>
+        <div class="review-stat-card">
+          <div class="stat-value">248</div>
+          <div class="stat-stars">💬</div>
+          <div class="stat-label">Всего отзывов</div>
+        </div>
+        <div class="review-stat-card">
+          <div class="stat-value">98%</div>
+          <div class="stat-stars">✓</div>
+          <div class="stat-label">Рекомендуют</div>
+        </div>
+        <div class="review-stat-card">
+          <div class="stat-value">100%</div>
+          <div class="stat-stars">🚀</div>
+          <div class="stat-label">В срок</div>
+        </div>
+      </div>
+
+      <div class="reviews-filter-row">
+        <button class="reviews-filter active" data-rfilter="all">Все отзывы</button>
+        <button class="reviews-filter" data-rfilter="5">Только 5★</button>
+        <button class="reviews-filter" data-rfilter="4.5">4.5★ и выше</button>
+        <button class="reviews-filter" data-rfilter="recent">Сначала новые</button>
+      </div>
+
+      <div class="reviews-book">
+        <div class="reviews-page" id="reviewsPage"></div>
+        <div class="reviews-pagination">
+          <button class="page-btn" id="reviewsPrev">← Назад</button>
+          <span class="page-info" id="reviewsPageInfo">Страница 1 из 6</span>
+          <button class="page-btn" id="reviewsNext">Вперёд →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section-wrap section-block process-section" id="process">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">04 / КАК РАБОТАЮ</div>
+          <h2>Понятный процесс.<br><span class="muted-heading">Без сюрпризов.</span></h2>
+        </div>
+        <p>Договорённости фиксируются до начала разработки. Вы понимаете, что будет сделано, в какие сроки и что получите на выходе.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step"><span>01</span><h3>Погружение</h3><p>Разбираюсь в задаче, ограничениях и критериях готовности. Задаю вопросы, пока не пойму всё до конца.</p></div>
+        <div class="process-step"><span>02</span><h3>План и оценка</h3><p>Согласовываем объём, стоимость, этапы и сроки. Фиксируем в договоре или переписке.</p></div>
+        <div class="process-step"><span>03</span><h3>Разработка</h3><p>Показываю промежуточный результат, тестирую и учитываю обратную связь. Работаю спринтами по 1-2 недели.</p></div>
+        <div class="process-step"><span>04</span><h3>Передача</h3><p>Передаю код, инструкцию запуска, документацию и согласованные материалы. Поддержка после релиза включена.</p></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section-wrap section-block about-section" id="about">
+      <div class="about-panel">
+        <div class="about-mark">&lt;py /&gt;</div>
+        <div class="about-content">
+          <div class="eyebrow">05 / ОБО МНЕ</div>
+          <h2>MeMiasma — Senior Python Developer<br>с фокусом на бизнес.</h2>
+          <p>Меня зовут MeMiasma. Я Senior Python-разработчик с опытом <strong>более 10 лет</strong> и <strong>320+ реализованных проектов</strong>. Специализируюсь на разработке Telegram-ботов, backend-сервисов, парсеров и SaaS-платформ под задачи малого, среднего и крупного бизнеса.</p>
+          <p>Начинал с простых скриптов автоматизации в 2014 году, сейчас работаю над высоконагруженными системами: платёжные шлюзы, крипто-биржи, LMS-платформы и агрегаторы. Понимаю бизнес-логику, а не только код, поэтому предлагаю решения, которые реально работают и приносят прибыль.</p>
+          <p>В работе придерживаюсь трёх принципов: прозрачность, качество и сроки. Прозрачность означает, что вы всегда знаете, на каком этапе задача. Качество значит, что код пишется с расчётом на поддержку и масштабирование. Сроки значит, что если я вижу риск, я сообщаю об этом заранее, а не в день сдачи.</p>
+          <div class="about-highlights">
+            <span>✓ 10+ лет опыта</span>
+            <span>✓ 320+ проектов</span>
+            <span>✓ Рейтинг 4.9 / 5.0</span>
+            <span>✓ 248 отзывов</span>
+            <span>✓ Поддержка после релиза</span>
+            <span>✓ Работаю по договору</span>
+          </div>
+          <div class="about-stack">
+            <h3>Мой стек:</h3>
+            <div class="stack-grid">
+              <div class="stack-item"><strong>Языки</strong>Python (основной), JavaScript, Go, SQL, Bash</div>
+              <div class="stack-item"><strong>Backend</strong>FastAPI, Django, Flask, aiogram 3.x, Telethon, aiohttp</div>
+              <div class="stack-item"><strong>Базы данных</strong>PostgreSQL, MySQL, SQLite, MongoDB, Redis, ClickHouse</div>
+              <div class="stack-item"><strong>Очереди</strong>Celery, RabbitMQ, Kafka, Redis Queue</div>
+              <div class="stack-item"><strong>Парсинг</strong>Scrapy, Selenium, Playwright, BeautifulSoup, aiohttp</div>
+              <div class="stack-item"><strong>DevOps</strong>Docker, Docker Compose, Nginx, CI/CD, Linux, Ansible</div>
+              <div class="stack-item"><strong>Frontend</strong>HTML, CSS, JavaScript, React, Vue (базовый уровень)</div>
+              <div class="stack-item"><strong>Интеграции</strong>Telegram API, CryptoPay, YooKassa, Stripe, Google API, 1С</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section-wrap contact-section" id="contact">
+      <div class="contact-card">
+        <div class="eyebrow">06 / ОБСУДИМ ЗАДАЧУ</div>
+        <h2>Есть идея?<br><span class="gradient-text">Давайте воплотим её.</span></h2>
+        <p>Напишите пару слов о задаче. Обсудим цель, ограничения и следующий разумный шаг. Без обязательств.</p>
+        <div class="contact-actions">
+          <a class="button button-primary" href="https://t.me/MeMiasma" target="_blank">Написать в Telegram <span>↗</span></a>
+          <a class="button button-ghost" href="https://github.com/MeMiasma" target="_blank">GitHub <span>↗</span></a>
+        </div>
+        <div class="contact-foot">
+          <span><i class="status-dot"></i> Открыт к новым проектам</span>
+          <span>Telegram: @MeMiasma</span>
+          <span>GitHub: MeMiasma</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-wrap">
+    <a class="brand" href="#home"><span class="brand-mark">&lt;/&gt;</span><span>MeMiasma<span class="brand-dot">.</span>dev</span></a>
+    <span>© 2024 MeMiasma. 320+ проектов. Рейтинг 4.9★</span>
+    <a href="https://t.me/MeMiasma" target="_blank">Telegram ↗</a>
+  </footer>
+
+  <div class="modal-backdrop" id="projectModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modalClose">×</button>
+      <div class="modal-hero" id="modalHero"></div>
+      <div class="eyebrow" id="modalEyebrow">PROJECT</div>
+      <h2 id="modalTitle">Название проекта</h2>
+      <div class="modal-meta" id="modalMeta"></div>
+      <p id="modalDescription"></p>
+      <h3>Ключевые функции</h3>
+      <ul id="modalFeatures"></ul>
+      <h3>Стек технологий</h3>
+      <div class="tag-list" id="modalTags"></div>
+      <div class="modal-rating" id="modalRating"></div>
+    </div>
+  </div>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
+
+  <script src="projects-data.js"></script>
+  <script src="reviews-data.js"></script>
+  <script src="script.js"></script>
+  <script src="enhancements.js"></script>
+  <script src="ultra.js"></script>
+  <script src="signal-lab.js"></script>
+  <script src="cinematic.js"></script>
+</body>
+</html>
